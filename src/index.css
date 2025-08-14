@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Interior Design Landing Page - Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Core Colors - Sophisticated Neutrals */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+    
+    /* Surface Colors */
+    --surface: 0 0% 98%;
+    --surface-secondary: 0 0% 96%;
+    --surface-tertiary: 0 0% 94%;
+    
+    /* Text Colors */
+    --text-primary: 0 0% 9%;
+    --text-secondary: 0 0% 40%;
+    --text-muted: 0 0% 60%;
+    --text-inverse: 0 0% 98%;
+    
+    /* Brand Colors */
+    --primary: 222 47% 11%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 222 47% 8%;
+    
+    /* Accent Colors */
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 6% 10%;
+    --accent-hover: 240 5% 94%;
+    
+    /* Semantic Colors */
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --error: 0 84% 60%;
+    
+    /* UI Elements */
+    --border: 240 6% 90%;
+    --border-secondary: 240 6% 85%;
+    --input: 240 6% 96%;
+    --ring: 222 47% 11%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(222 47% 11%), hsl(222 47% 8%));
+    --gradient-surface: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 96%) 0%, hsl(0 0% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
+    
+    /* Radius */
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 9%;
+    --foreground: 0 0% 98%;
+    
+    --surface: 0 0% 11%;
+    --surface-secondary: 0 0% 13%;
+    --surface-tertiary: 0 0% 15%;
+    
+    --text-primary: 0 0% 98%;
+    --text-secondary: 0 0% 70%;
+    --text-muted: 0 0% 50%;
+    --text-inverse: 0 0% 9%;
+    
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --primary-hover: 0 0% 95%;
+    
+    --accent: 240 4% 16%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 240 4% 18%;
+    
+    --border: 240 4% 16%;
+    --border-secondary: 240 4% 20%;
+    --input: 240 4% 16%;
+    --ring: 0 0% 98%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 95%));
+    --gradient-surface: linear-gradient(135deg, hsl(0 0% 11%), hsl(0 0% 9%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 13%) 0%, hsl(0 0% 11%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-medium shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105;
+  }
+  
+  .btn-hero-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:shadow-lg;
+  }
+  
+  /* Section Headers */
+  .section-header {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary leading-tight tracking-tight;
+  }
+  
+  .section-subheader {
+    @apply text-xl md:text-2xl text-text-secondary leading-relaxed;
+  }
+  
+  /* Feature Cards */
+  .feature-card {
+    @apply bg-surface border border-border rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:border-border-secondary;
+  }
+  
+  /* Parallax Container */
+  .parallax-container {
+    @apply relative overflow-hidden;
+  }
+  
+  /* Gradient Overlays */
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-background/80 via-background/40 to-background/80;
+  }
+}
