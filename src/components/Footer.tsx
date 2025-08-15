@@ -34,17 +34,17 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-primary-foreground/60" />
                 <a
-                  href="mailto:contact@yourapp.com"
+                  href="mailto:support@elipse.in"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
                 >
-                  support@elipse.com
+                  support@elipse.in
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-primary-foreground/60" />
                 <a
-                  href="tel:+91-XXXXXXXXXX"
+                  href="tel:+91-9248099990"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
                 >
                   +91-9248099990
